@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: Jenkins
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+  ssh-agent:
+    container_name: SSH-Agent
+    image: jenkins/ssh-agent
+    restart: always
+
+volumes:
+  jenkins_home:
+
+# docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
