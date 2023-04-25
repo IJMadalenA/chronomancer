@@ -15,6 +15,13 @@ services:
     image: jenkins/ssh-agent
     restart: always
 
+  node:
+    container_name: Node
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    restart: always
+
 volumes:
   jenkins_home:
 
