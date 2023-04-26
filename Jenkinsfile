@@ -6,14 +6,14 @@ pipeline {
   }
 
   environment {
-    ARTIFACT_ID = "chronomancer-node:${env.BUILD_NUMBER}"
+    ARTIFACT_ID = "elbuo8/webapp:${env.BUILD_NUMBER}"
   }
 
   stages {
     stage('Build') {
       steps {
         script {
-          dir("chronomancer") {
+          dir("webapp") {
             dockerImage = docker.build "${env.ARTIFACT_ID}"
           }
         }
@@ -26,7 +26,7 @@ pipeline {
     }
     stage('Publish') {
       when {
-        branch 'master '
+        branch 'master'
       }
       steps {
         script {
@@ -41,7 +41,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        build job: 'deploy-chronomancer-staging', parameters: [string(name: 'ARTIFACT_ID', value: "${env.ARTIFACT_ID}")], wait: false
+        build job: 'deploy-webapp-staging', parameters: [string(name: 'ARTIFACT_ID', value: "${env.ARTIFACT_ID}")], wait: false
       }
     }
   }
