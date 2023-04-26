@@ -13,12 +13,6 @@ pipeline {
   stage('Install Docker') {
       steps {
         sh "pwd"
-        sh "ls"
-        sh "whoami"
-        sh "chown jenkins ./install.sh"
-        sh "chmod +x -R ${env.WORKSPACE}"
-        sh "ls"
-        sh "pwd"
         sh "./install.sh"
         echo "installation success."
       }
