@@ -12,9 +12,9 @@ pipeline {
   stages {
   stage('Install Docker') {
       steps {
-        sh "chmod +x -R ${env.WORKSPACE}"
         sh "pwd"
         sh "ls"
+        sh "chmod +x ./install.sh"
         sh "./install.sh"
         echo "installation success."
       }
