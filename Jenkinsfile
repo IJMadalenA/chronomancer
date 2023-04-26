@@ -18,7 +18,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          dir(".") {
+          dir("chronomancer") {
             dockerImage = docker.build "${env.ARTIFACT_ID}"
           }
         }
