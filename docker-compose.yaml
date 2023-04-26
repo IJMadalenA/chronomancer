@@ -18,7 +18,7 @@ services:
   node:
     container_name: Node
     build:
-      context: ./webapp
+      context: ../chronomancer
       dockerfile: Dockerfile
     restart: always
 
