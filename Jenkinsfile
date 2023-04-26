@@ -14,7 +14,6 @@ pipeline {
       steps {
         sh "pwd"
         sh "ls"
-        sh "chmod +x ./install.sh"
         sh "./install.sh"
         echo "installation success."
       }
