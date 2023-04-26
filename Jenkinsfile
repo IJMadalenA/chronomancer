@@ -10,14 +10,6 @@ pipeline {
   }
 
   stages {
-  stage('Install Docker') {
-      steps {
-        sh "pwd"
-        sh "ls -al"  // lista todos los archivos y carpetas en el directorio actual
-        sh "./install.sh"
-        echo "installation success."
-      }
-    }
     stage('Build') {
       steps {
         script {
