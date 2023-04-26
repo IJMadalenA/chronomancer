@@ -18,6 +18,7 @@ pipeline {
         sh "chown jenkins ./install.sh"
         sh "chmod +x -R ${env.WORKSPACE}"
         sh "ls"
+        sh "pwd"
         sh "./install.sh"
         echo "installation success."
       }
