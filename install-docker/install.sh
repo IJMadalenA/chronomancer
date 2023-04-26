@@ -12,6 +12,3 @@ apt-get update
 # Añadir el usuario actual al grupo de docker para evitar usar sudo
 usermod -aG docker $(whoami)
 usermod -aG docker jenkins
-
-# Reiniciar servicio Docker
-systemctl jenkins restart
