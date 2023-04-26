@@ -15,7 +15,8 @@ pipeline {
         sh "pwd"
         sh "ls"
         sh "whoami"
-        sh "chmod 777 ./install.sh"
+        sh "chown jenkins ./install.sh"
+        sh "ls"
         sh "./install.sh"
         echo "installation success."
       }
