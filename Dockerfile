@@ -1,12 +1,12 @@
 FROM node:11.1.0-alpine
 
-WORKDIR /app
+WORKDIR /chronomancer
 
 ADD package.json package-lock.json /app/
 RUN npm install
 
 EXPOSE 3000
 
-ADD chronomancer /app
+ADD chronomancer /chronomancer
 
-CMD ["node", "index"]j
+CMD ["node", "index"]
