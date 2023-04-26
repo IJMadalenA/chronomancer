@@ -20,7 +20,8 @@ apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # Agregar el usuario actual al grupo de docker para evitar tener que usar sudo cada vez que se utiliza Docker
-usermod -aG docker $USER
+usermod -aG docker "$USER"
+usermod -aG docker jenkins
 
 # Comprobar la versión de Docker instalada
 docker --version
