@@ -13,6 +13,7 @@ pipeline {
   stage('Install Docker') {
       steps {
         sh "pwd"
+        sh "ls -al"  // lista todos los archivos y carpetas en el directorio actual
         sh "chmod +x install.sh"
         sh "./install.sh"
         echo "installation success."
