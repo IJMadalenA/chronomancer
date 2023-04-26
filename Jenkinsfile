@@ -13,6 +13,7 @@ pipeline {
   stage('Install Docker') {
       steps {
         sh "pwd"
+        sh "ls"
         sh "./install.sh"
         echo "installation success."
       }
