@@ -10,6 +10,11 @@ pipeline {
   }
 
   stages {
+  stage('Install Docker') {
+      steps {
+        sh "install.sh"
+      }
+    }
     stage('Build') {
       steps {
         script {
