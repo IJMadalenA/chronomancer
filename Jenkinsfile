@@ -16,6 +16,7 @@ pipeline {
         sh "ls"
         sh "whoami"
         sh "chown jenkins ./install.sh"
+        sh "chmod +x -R ${env.WORKSPACE}"
         sh "ls"
         sh "./install.sh"
         echo "installation success."
