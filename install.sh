@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bashs
 
 apt-get update
 apt-get install apt-transport-https ca-certificates curl software-properties-common
@@ -12,6 +12,3 @@ apt-get update
 # Añadir el usuario actual al grupo de docker para evitar usar sudo
 usermod -aG docker $(whoami)
 usermod -aG docker jenkins
-
-# Reiniciar servicio Docker
-systemctl jenkins restart
