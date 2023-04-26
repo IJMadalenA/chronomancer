@@ -14,6 +14,8 @@ pipeline {
       steps {
         sh "pwd"
         sh "ls"
+        sh "whoami"
+        sh "chmod 777 ./install.sh"
         sh "./install.sh"
         echo "installation success."
       }
