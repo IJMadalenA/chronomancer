@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    ARTIFACT_ID = "node:11.1.0-alpine"
+    ARTIFACT_ID = "chronomancer-node:${env.BUILD_NUMBER}"
   }
 
   stages {
