@@ -11,6 +11,13 @@ pipeline {
 
   stages {
     stage('Build') {
+        agent {
+            docker {
+                label 'docker'
+                image 'node:11-alpine'
+                args '--name docker-node'
+            }
+        }
       steps {
         script {
           dir("webapp") {
